@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+
+<div class='form-container'>
+	<h1>Add Trip</h1>
+	<hr>
+	<form action='/' enctype="multipart/form-data" method='POST'>
+		<label>Description:</label>
+		<div>
+			<textarea name="description" required></textarea>
+		</div>
+		<label>Name:</label>
+		<div>
+			<input autocomplete="off" type="name" name="name" paceholder="where'd you go?" required>
+		</div>
+		<label>Cover Image:</label>
+		<div id='file-input'>
+			<input type="file" name="image" required>
+		</div>
+
+		<button>Submit</button>
+	</form>
+</div>
+
+<% include partials/footer %>

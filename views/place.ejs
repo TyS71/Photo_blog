@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<div class='item-container'>
+	<h1 id='header'>Welcome to <%=place.name%></h1>
+
+	<a id='addImage' class='ui inverted secondary button' href='/<%=place._id%>/addImage'>Add photo to your trip!</a>
+
+	<h4 id='desc'><em><%=place.description%></em></h4>
+	<div id='image-container'>
+	<% place.images.forEach(function(img){ %>
+		<div class='img-div'>
+			<img src='photos/<%=img.image%>'>
+			<form class='delete-form' action='/<%=place.id%>/<%=img.id%>?_method=DELETE' method='POST'>
+					<button class='ui button red delete'>X</button>
+			</form>
+		</div>
+	<% }) %>
+	</div>
+</div>	
+
+<% include partials/footer %>

@@ -1,0 +1,16 @@
+<% include partials/header %>
+
+<a id='add-trip' href='/addTrip'>Add Another Trip</a>
+
+<% places.forEach(function(place){ %>
+<div class='section-div'>
+	<a href='/<%=place._id%>'><section style="background-image:url('photos/<%=place.mainImage%>')">
+		<h1><%=place.name%></h1>
+	</section></a>
+</div>
+<% }) %>
+
+
+
+
+<% include partials/footer %>
